@@ -1,4 +1,4 @@
-import { type Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
 
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -6,10 +6,46 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#292929',
-        secondary: '#E4E2DD',
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    function({ addUtilities, addComponents, e, prefix, config }) {
+      const newUtilities = {
+        '.horizontal-tb': {
+          writingMode: 'horizontal-tb',
+        },
+        '.vertical-rl': {
+          writingMode: 'vertical-rl'
+        },
+        '.vertical-lr': {
+          writingMode: 'vertical-lr'
+        }
+      }
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+      addUtilities(newUtilities)
+    },
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-bottom::before': {
+          content: "''",
+          display: 'inline-block',
+          height: '100%',
+          verticalAlign: 'bottom',
+        },
+      };
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+      addUtilities(newUtilities, ['responsive']);
+    },
+  ],
 } satisfies Config;

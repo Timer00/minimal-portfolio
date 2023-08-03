@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Light/Dark theme configuration */
+:root {
+    --color-primary: #292929; /* light mode primary color */
+    --color-secondary: #E4E2DD; /* light mode secondary color */
+}
+
+.dark {
+    --color-primary: #E4E2DD; /* dark mode primary color (light mode secondary color) */
+    --color-secondary: #292929; /* dark mode secondary color (light mode primary color) */
+}
+
+
+/* Candle Chart styled scrollbar */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+/* Need scrollbar thumb width to be 7px, so had to define whole scrollbar to be 7px wide.*/
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-primary);;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+
+
+.direction-rtl {
+    direction: rtl;
+}
+
+.direction-ltr {
+    direction: ltr;
+}
+
+.container {
+    font-family: "aileron", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
