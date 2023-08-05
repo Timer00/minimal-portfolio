@@ -13,13 +13,14 @@
     --color-secondary: #292929; /* dark mode secondary color (light mode primary color) */
 }
 
-
-/* Candle Chart styled scrollbar */
+    /* Candle Chart styled scrollbar */
 
 ::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
-/* Need scrollbar thumb width to be 7px, so had to define whole scrollbar to be 7px wide.*/
+    -webkit-overflow-scrolling: auto;
+
+    width: 0.5vw;
+    height: 0.5vw;
+/* Need scrollbar thumb width to be Xpx, so had to define whole scrollbar to be Xpx wide.*/
 }
 
 ::-webkit-scrollbar-thumb {
@@ -27,8 +28,8 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-primary);;
-    border: 3px solid transparent;
+    background: var(--color-primary);
+    border: 0.2vw solid transparent; /* 3px */
     background-clip: padding-box;
 }
 

@@ -6,7 +6,11 @@ export function useResponsiveSquare(percentageOfScreen: number) {
   useEffect(() => {
     const updateSize = () => {
       const minDimension = Math.min(window.innerHeight, window.innerWidth);
-      setDimension(minDimension * percentageOfScreen);  // 80% of the smallest viewport dimension
+      if (window.innerWidth > 400) {
+        setDimension(minDimension * percentageOfScreen);  // 80% of the smallest viewport dimension
+      } else {
+        setDimension(minDimension * 1);
+      }
     };
     window.addEventListener('resize', updateSize);
     updateSize(); // initiate the size
