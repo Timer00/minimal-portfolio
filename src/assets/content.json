@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "title": "theo.host",
+    "link": "https://theo.host",
+    "description": "Accomplished Tech Lead with a successful 8 year track record managing teams and delivering high- quality software solutions."
+  },
+  "tech": {
+    "title": "Tech",
+    "name": "Theo Carrara",
+    "year": "2016-2023",
+    "list": [
+      "React",
+      "Javascript",
+      "NodeJs",
+      "Tailwind",
+      "NextJs",
+      "Docker",
+      "Liquid",
+      "HTML5",
+      "CSS3",
+      "React Native",
+      "Git",
+      "MySql",
+      "Postgres",
+      "Graphic Design",
+      "GraphQL",
+      "REST"
+    ]
+  },
+  "projects": {
+    "title": "PROJECTS",
+    "list": [
+      "MySecondEar",
+      "Phlote",
+      "Koji",
+      "MAGTAB",
+      "Editor Alaude",
+      "Energisa",
+      "Lucrefire",
+      "Enconta",
+      "Newtail",
+      "O Boticário",
+      "ABC Brasil T.",
+      "Gabriel Carrara",
+      "Caminhos Zen",
+      "F. G. A."
+    ]
+  }
+}
