@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 
-const useDarkMode = (): boolean => {
+const useDarkMode = () => {
   const [isDark, setIsDark] = useState(false);
+
+  const flip = ()=>{
+    setIsDark(!isDark);
+  }
 
   useEffect(() => {
     if (isDark) {
@@ -28,7 +32,7 @@ const useDarkMode = (): boolean => {
 
   }, []);
 
-  return isDark;
+  return [isDark, flip] as const;
 };
 
 export default useDarkMode;
