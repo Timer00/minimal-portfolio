@@ -14,7 +14,7 @@ export const Selectable = ({ className, children }: SelectableProps) => {
   }
 
   const twClasses = twMerge(
-    'hover:border-primary/60 hover:bg-primary/20',
+    'sm:hover:border-primary/60 sm:hover:bg-primary/20',
     'ease-in duration-100 border border-primary/0 cursor-pointer',
     selected ? 'border-primary/40 bg-primary/10' : '',
     className
