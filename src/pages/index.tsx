@@ -6,14 +6,29 @@ import { Hero } from "~/sections/Hero";
 import { Tech } from "~/sections/Tech";
 import { Projects } from "~/sections/Projects";
 import { LightDarkToggle } from "~/components/LightDarkToggle";
-import { useState } from "react";
+import { memo, useState } from "react";
+
+interface ResponsiveContainerProps {
+  className: string;
+  dimension: number;
+  children: React.ReactNode;
+}
+
+const ResponsiveContainer =
+  memo(function ResponsiveContainer({ className, dimension, children }: ResponsiveContainerProps) {
+
+    return (
+      <div className={className} style={dimension > 200 ? { width: dimension, height: dimension }: {}}>
+        {children}
+      </div>
+    )
+  });
 
 export default function Home() {
   const [, flip] = useDarkMode();
   const [selectedTech, setSelectedTech] = useState([]);
   useReverseScroll('reverse-scroll')
   const dimension = useResponsiveSquare(0.9);
-  // TODO: allow this to work with JS disabled, perhaps cache a few possible dimensions with static props?
 
   return (
     <>
@@ -22,13 +37,14 @@ export default function Home() {
         <meta name="description" content="Full stack Engineer Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="transition-all ease-in duration-1000 min-h-screen bg-secondary flex justify-center items-center text-primary">
-        <LightDarkToggle switchMode={flip} className='absolute top-[6vh] sm:top-[3vh] right-[20vw] sm:right-[10vw]'/>
-        <div className="container grid grid-cols-5 grid-rows-2" style={{ width: dimension, height: dimension }}>
-          <Hero className='grid-rows-3 col-span-3 row-span-1'/>
-          <Tech className='grid-cols-3 col-span-2 row-span-2'/>
+      <main
+        className="transition-all ease-in duration-1000 min-h-screen bg-secondary flex justify-center items-center text-primary">
+        <LightDarkToggle switchMode={flip} className='absolute top-[6vh] sm:top-[3vh] right-[20vw] sm:right-[10vw]' />
+        <ResponsiveContainer className="container grid grid-cols-5 grid-rows-2" dimension={dimension}>
+          <Hero className='grid-rows-3 col-span-3 row-span-1' />
+          <Tech className='grid-cols-3 col-span-2 row-span-2' />
           <Projects className='col-span-3 row-span-1' />
-        </div>
+        </ResponsiveContainer>
       </main>
     </>
   );

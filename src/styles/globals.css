@@ -17,7 +17,8 @@
     --color-secondary: 41 41 41; /* dark mode secondary color (light mode primary color) */
 }
 
-/* Candle Chart styled scrollbar */
+    /* Candle Chart styled scrollbar */
+/* TODO: Custom scrollbar not working on firefox */
 
 ::-webkit-scrollbar {
     -webkit-overflow-scrolling: auto;
@@ -50,6 +51,22 @@
     font-family: "aileron", sans-serif;
     font-weight: 400;
     font-style: normal;
+    width: 375px;
+    height: 375px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 831px;
+        height: 831px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .container {
+        width: 970px;
+        height: 970px;
+    }
 }
 
 .center-content {
