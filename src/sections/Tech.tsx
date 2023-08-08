@@ -1,5 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 import content from '~/assets/content.json';
+import { Selectable } from "~/components/Selectable";
 
 interface TechContent {
   title: string;
@@ -18,9 +19,10 @@ export const Tech = ({ className }: TechProps) => {
   return (
     <div className={twMerge('grid border-l-2 border-primary', className)}>
       <div
-        className="col-span-2 sm:m-5 m-3 sm:mb-14 mb-6 mt-0 mr-0 sm:text-[1.6vw] text-[3vw] overflow-y-scroll overflow-x-hidden">
-        {list.map((item, i) => <div key={i}>{item}</div>)}
+        className="col-span-2 pr-2 sm:m-5 m-3 sm:mb-14 mb-6 mt-0 sm:mr-0 mr-0 sm:text-[1.6vw] text-[3vw] overflow-y-scroll overflow-x-hidden">
+        {list.map((item, i) => <Selectable className='pl-2' key={i}>{item}</Selectable>)}
       </div>
+
       <div className='grid grid-rows-2 col-span-2 row-span-1 mb-4'>
         <div className='row-span-1 sm:p-5 p-2 font-bold sm:text-[6vw] text-[9vw] border-b-2 border-primary text-bottom'>
           {title}

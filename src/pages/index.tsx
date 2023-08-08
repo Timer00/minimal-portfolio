@@ -6,11 +6,14 @@ import { Hero } from "~/sections/Hero";
 import { Tech } from "~/sections/Tech";
 import { Projects } from "~/sections/Projects";
 import { LightDarkToggle } from "~/components/LightDarkToggle";
+import { useState } from "react";
 
 export default function Home() {
   const [, flip] = useDarkMode();
+  const [selectedTech, setSelectedTech] = useState([]);
   useReverseScroll('reverse-scroll')
   const dimension = useResponsiveSquare(0.9);
+  // TODO: allow this to work with JS disabled, perhaps cache a few possible dimensions with static props?
 
   return (
     <>

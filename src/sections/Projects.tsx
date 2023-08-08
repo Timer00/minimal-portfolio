@@ -16,7 +16,7 @@ export const Projects = ({ className }: ProjectsProps) => {
   const { title, list } = content.projects as ProjectsContent;
 
   return (
-    <div className={twMerge('transition-all justify-end flex col-span-3 row-span-1 group sm:pl-0 pl-8', className)}>
+    <div className={twMerge('justify-end flex col-span-3 row-span-1 group sm:pl-0 pl-8', className)}>
       <div className='flex flex-none items-end font-bold sm:text-[3.2vw] text-[6vw] leading-normal'>
         P R<br />O J<br />E C<br />T S
       </div>

@@ -2,18 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    box-sizing: border-box;
+}
+
 /* Light/Dark theme configuration */
 :root {
-    --color-primary: #292929; /* light mode primary color */
-    --color-secondary: #E4E2DD; /* light mode secondary color */
+    --color-primary: 41 41 41; /* light mode primary color */
+    --color-secondary: 228 226 221; /* light mode secondary color */
 }
 
 .dark {
-    --color-primary: #E4E2DD; /* dark mode primary color (light mode secondary color) */
-    --color-secondary: #292929; /* dark mode secondary color (light mode primary color) */
+    --color-primary: 228 226 221; /* dark mode primary color (light mode secondary color) */
+    --color-secondary: 41 41 41; /* dark mode secondary color (light mode primary color) */
 }
 
-    /* Candle Chart styled scrollbar */
+/* Candle Chart styled scrollbar */
 
 ::-webkit-scrollbar {
     -webkit-overflow-scrolling: auto;
@@ -24,11 +28,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-primary);
+    background: rgb(var(--color-primary));
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-primary);
+    background: rgb(var(--color-primary));
     border: 0.2vw solid transparent; /* 3px */
     background-clip: padding-box;
 }
