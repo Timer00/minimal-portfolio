@@ -9,13 +9,13 @@ export function useResponsiveSquare(percentageOfScreen: number) {
       if (window.innerWidth > 400) {
         setDimension(minDimension * percentageOfScreen);  // 80% of the smallest viewport dimension
       } else {
-        setDimension(minDimension * 1);
+        setDimension(minDimension * 1); // If mobile dimensions can be as large as possible
       }
     };
     window.addEventListener('resize', updateSize);
-    updateSize(); // initiate the size
+    updateSize(); // Calculate first dimensions
     return () => window.removeEventListener('resize', updateSize);
-  }, []);  // Empty array ensures that effect is only run on mount and unmount
+  }, []);  // Run once to calculate initial dimensions
 
-  return dimension ;
+  return dimension;
 }
