@@ -17,7 +17,6 @@ export const Projects = ({ className, selectedTech }: ProjectsProps) => {
   const [projectList, setProjectList ] = useState(list);
 
   useEffect(()=>{
-    console.log(selectedTech);
     if (selectedTech.length !== 0) {
       const filteredList = list.filter(project => project.tech.some(tech =>
         selectedTech.map(t => t.toLowerCase()).includes(tech.toLowerCase())));
@@ -25,10 +24,8 @@ export const Projects = ({ className, selectedTech }: ProjectsProps) => {
     } else {
       setProjectList(list);
     }
-  }, [selectedTech])
-
-  useEffect(()=>console.log(projectList), [projectList]);
-
+  }, [list, selectedTech])
+  
   return (
     <div className={twMerge('justify-end flex col-span-3 row-span-1 group sm:pl-0 pl-8', className)}>
       <div className='flex flex-none items-end font-bold sm:text-[3.2vw] text-[6vw] leading-normal'>
