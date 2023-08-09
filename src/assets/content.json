@@ -34,6 +34,7 @@
     "list": [
       {
         "name": "MySecondEar",
+        "selected":true,
         "tech": [
           "git",
           "Javascript",
@@ -51,6 +52,7 @@
       },
       {
         "name": "Phlote",
+        "selected": true,
         "tech": [
           "git",
           "Javascript",
@@ -67,6 +69,7 @@
       },
       {
         "name": "Koji",
+        "selected": true,
         "tech": [
           "git",
           "Javascript",
@@ -79,6 +82,7 @@
       },
       {
         "name": "MAGTAB",
+        "selected": true,
         "tech": [
           "git",
           "Javascript",
@@ -89,6 +93,7 @@
       },
       {
         "name": "Editor Alaude",
+        "selected": true,
         "tech": [
           "git",
           "Javascript",
@@ -100,6 +105,7 @@
       },
       {
         "name": "Energisa",
+        "selected": true,
         "tech": [
           "git",
           "Javascript",
@@ -111,6 +117,7 @@
       },
       {
         "name": "Lucrefire",
+        "selected": true,
         "tech": [
           "git",
           "Javascript",
@@ -123,6 +130,7 @@
       },
       {
         "name": "Enconta",
+        "selected": true,
         "tech": [
           "git",
           "Javascript",
@@ -135,6 +143,7 @@
       },
       {
         "name": "Newtail",
+        "selected": true,
         "tech": [
           "git",
           "Javascript",
@@ -146,6 +155,7 @@
       },
       {
         "name": "O Boticário",
+        "selected": true,
         "tech": [
           "Javascript",
           "HTML5",
@@ -155,6 +165,7 @@
       },
       {
         "name": "ABC Brasil T.",
+        "selected": true,
         "tech": [
           "HTML5",
           "CSS3"
@@ -162,18 +173,21 @@
       },
       {
         "name": "Gabriel Carrara",
+        "selected": true,
         "tech": [
           "Graphic Design"
         ]
       },
       {
         "name": "Caminhos Zen",
+        "selected": true,
         "tech": [
           "Graphic Design"
         ]
       },
       {
         "name": "F. G. A.",
+        "selected": true,
         "tech": [
           "Graphic Design"
         ]
