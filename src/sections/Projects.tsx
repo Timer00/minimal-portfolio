@@ -1,7 +1,5 @@
 import { twMerge } from 'tailwind-merge';
 import content from '~/assets/content.json';
-import { visit } from "yaml/dist/parse/cst-visit";
-import itemAtPath = visit.itemAtPath;
 import { useEffect, useState } from "react";
 
 interface ProjectsContent {
