@@ -18,7 +18,7 @@ const ResponsiveContainer =
   memo(function ResponsiveContainer({ className, dimension, children }: ResponsiveContainerProps) {
 
     return (
-      <div className={className} style={dimension > 200 ? { width: dimension, height: dimension }: {}}>
+      <div className={className} style={dimension > 200 ? { width: dimension, height: dimension } : {}}>
         {children}
       </div>
     )
@@ -26,8 +26,21 @@ const ResponsiveContainer =
 
 export default function Home() {
   const [, flip] = useDarkMode();
+  const [selectedTech, setSelectedTech] = useState<string[]>([]);
   useReverseScroll('reverse-scroll')
   const dimension = useResponsiveSquare(0.9);
+
+  const handleTechFilter = (tech: string) => {
+    setSelectedTech((prevSelected: string[]) => {
+      if (prevSelected.includes(tech)) {
+        // Remove tech from selected list
+        return prevSelected.filter((i: string) => i !== tech);
+      } else {
+        // Add tech to selected list
+        return [...prevSelected, tech];
+      }
+    });
+  };
 
   return (
     <>
@@ -37,12 +50,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className="transition-all ease-in duration-1000 min-h-screen bg-secondary flex justify-center items-center text-primary">
+        className="h-full transition-all ease-in duration-1000 bg-secondary flex justify-center items-center text-primary">
         <LightDarkToggle switchMode={flip} className='absolute top-[6vh] sm:top-[3vh] right-[20vw] sm:right-[10vw]' />
         <ResponsiveContainer className="container grid grid-cols-5 grid-rows-2" dimension={dimension}>
           <Hero className='grid-rows-3 col-span-3 row-span-1' />
-          <Tech className='grid-cols-3 col-span-2 row-span-2' />
-          <Projects className='col-span-3 row-span-1' />
+          <Tech handleTechFilter={handleTechFilter} className='grid-cols-3 col-span-2 row-span-2' />
+          <Projects selectedTech={selectedTech} className='col-span-3 row-span-1' />
         </ResponsiveContainer>
       </main>
     </>
