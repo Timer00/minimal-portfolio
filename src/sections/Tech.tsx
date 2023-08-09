@@ -25,7 +25,7 @@ export const Tech = ({ className, handleTechFilter }: TechProps) => {
       </div>
 
       <div className='grid grid-rows-2 col-span-3 row-span-1 mb-4'>
-        <div className='row-span-1 sm:p-5 p-2 mr-24 font-bold sm:text-[6vw] text-[9vw] border-b-2 border-primary text-bottom'>
+        <div className='row-span-1 sm:p-5 p-2 font-bold sm:text-[6vw] text-[9vw] border-b-2 border-primary text-bottom'>
           {title}
         </div>
         <div className='row-span-1 max-w-fit'>

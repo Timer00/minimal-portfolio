@@ -50,7 +50,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className="transition-all ease-in duration-1000 min-h-screen bg-secondary flex justify-center items-center text-primary">
+        className="h-full transition-all ease-in duration-1000 bg-secondary flex justify-center items-center text-primary">
         <LightDarkToggle switchMode={flip} className='absolute top-[6vh] sm:top-[3vh] right-[20vw] sm:right-[10vw]' />
         <ResponsiveContainer className="container grid grid-cols-5 grid-rows-2" dimension={dimension}>
           <Hero className='grid-rows-3 col-span-3 row-span-1' />

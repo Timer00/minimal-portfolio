@@ -37,8 +37,8 @@ export const Projects = ({ className, selectedTech }: ProjectsProps) => {
         P R<br />O J<br />E C<br />T S
       </div>
 
-      <div className='ease-in-out duration-500 transform flex flex-col justify-end sm:text-[1.6vw] text-[3vw]
-            group-hover:flex-grow w-0 sm:p-5 p-2 overflow-hidden'>
+      <div className={`ease-in-out duration-500 transform flex flex-col justify-end sm:text-[1.6vw] text-[3vw]
+       w-0 sm:p-5 p-2 overflow-hidden ${selectedTech.length > 0 ? 'flex-grow' : 'group-hover:flex-grow'}`}>
               <span
                 className='delay-300 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-200'>
                 PROFESSIONAL

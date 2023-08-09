@@ -6,8 +6,17 @@
     box-sizing: border-box;
 }
 
+/* Making sure the app fills the viewport */
+#__next, html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 /* Light/Dark theme configuration */
 :root {
+    position: absolute;
+    inset: 0;
     --color-primary: 41 41 41; /* light mode primary color */
     --color-secondary: 228 226 221; /* light mode secondary color */
 }
