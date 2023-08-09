@@ -3,14 +3,16 @@ import React, { useState } from "react";
 
 interface SelectableProps {
   className?: string;
-  children: React.ReactNode
+  children: string;
+  onClick: (tech: string) => void;
 }
 
-export const Selectable = ({ className, children }: SelectableProps) => {
+export const Selectable = ({ className, children, onClick }: SelectableProps) => {
   const [selected, setSelected] = useState(false);
 
   const selectToggle = () => {
     setSelected(!selected);
+    onClick(children);
   }
 
   const twClasses = twMerge(

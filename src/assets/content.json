@@ -24,26 +24,160 @@
       "Postgres",
       "Graphic Design",
       "GraphQL",
-      "REST"
+      "REST",
+      "PWA",
+      "Canvas"
     ]
   },
   "projects": {
     "title": "PROJECTS",
     "list": [
-      "MySecondEar",
-      "Phlote",
-      "Koji",
-      "MAGTAB",
-      "Editor Alaude",
-      "Energisa",
-      "Lucrefire",
-      "Enconta",
-      "Newtail",
-      "O Boticário",
-      "ABC Brasil T.",
-      "Gabriel Carrara",
-      "Caminhos Zen",
-      "F. G. A."
+      {
+        "name": "MySecondEar",
+        "tech": [
+          "git",
+          "Javascript",
+          "HTML5",
+          "CSS3",
+          "React",
+          "NodeJS",
+          "NextJS",
+          "Liquid",
+          "docker",
+          "REST",
+          "GraphQL",
+          "Tailwind"
+        ]
+      },
+      {
+        "name": "Phlote",
+        "tech": [
+          "git",
+          "Javascript",
+          "HTML5",
+          "CSS3",
+          "React",
+          "NodeJS",
+          "Phlote",
+          "NextJS",
+          "Postgres",
+          "REST",
+          "Tailwind"
+        ]
+      },
+      {
+        "name": "Koji",
+        "tech": [
+          "git",
+          "Javascript",
+          "HTML5",
+          "CSS3",
+          "React",
+          "NodeJS",
+          "Canvas"
+        ]
+      },
+      {
+        "name": "MAGTAB",
+        "tech": [
+          "git",
+          "Javascript",
+          "HTML5",
+          "CSS3",
+          "React Native"
+        ]
+      },
+      {
+        "name": "Editor Alaude",
+        "tech": [
+          "git",
+          "Javascript",
+          "HTML5",
+          "CSS3",
+          "React",
+          "NodeJS"
+        ]
+      },
+      {
+        "name": "Energisa",
+        "tech": [
+          "git",
+          "Javascript",
+          "HTML5",
+          "CSS3",
+          "React",
+          "NodeJS"
+        ]
+      },
+      {
+        "name": "Lucrefire",
+        "tech": [
+          "git",
+          "Javascript",
+          "HTML5",
+          "CSS3",
+          "React",
+          "NodeJS",
+          "Canvas"
+        ]
+      },
+      {
+        "name": "Enconta",
+        "tech": [
+          "git",
+          "Javascript",
+          "HTML5",
+          "CSS3",
+          "React",
+          "NodeJS",
+          "PWA"
+        ]
+      },
+      {
+        "name": "Newtail",
+        "tech": [
+          "git",
+          "Javascript",
+          "HTML5",
+          "CSS3",
+          "React",
+          "NodeJS"
+        ]
+      },
+      {
+        "name": "O Boticário",
+        "tech": [
+          "Javascript",
+          "HTML5",
+          "CSS3",
+          "Canvas"
+        ]
+      },
+      {
+        "name": "ABC Brasil T.",
+        "tech": [
+          "HTML5",
+          "CSS3"
+        ]
+      },
+      {
+        "name": "Gabriel Carrara",
+        "tech": [
+          "Graphic Design"
+        ]
+      },
+      {
+        "name": "Caminhos Zen",
+        "tech": [
+          "Graphic Design"
+        ]
+      },
+      {
+        "name": "F. G. A.",
+        "tech": [
+          "Graphic Design"
+        ]
+      }
     ]
   }
 }

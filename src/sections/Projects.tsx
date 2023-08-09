@@ -2,18 +2,34 @@ import { twMerge } from 'tailwind-merge';
 import content from '~/assets/content.json';
 import { visit } from "yaml/dist/parse/cst-visit";
 import itemAtPath = visit.itemAtPath;
+import { useEffect, useState } from "react";
 
 interface ProjectsContent {
   title: string;
-  list: string[];
+  list: { name: string, tech: string[]}[];
 }
 
 interface ProjectsProps {
   className?: string;
+  selectedTech: string[];
 }
 
-export const Projects = ({ className }: ProjectsProps) => {
+export const Projects = ({ className, selectedTech }: ProjectsProps) => {
   const { title, list } = content.projects as ProjectsContent;
+  const [projectList, setProjectList ] = useState(list);
+
+  useEffect(()=>{
+    console.log(selectedTech);
+    if (selectedTech.length !== 0) {
+      const filteredList = list.filter(project => project.tech.some(tech =>
+        selectedTech.map(t => t.toLowerCase()).includes(tech.toLowerCase())));
+      setProjectList(filteredList);
+    } else {
+      setProjectList(list);
+    }
+  }, [selectedTech])
+
+  useEffect(()=>console.log(projectList), [projectList]);
 
   return (
     <div className={twMerge('justify-end flex col-span-3 row-span-1 group sm:pl-0 pl-8', className)}>
@@ -29,7 +45,7 @@ export const Projects = ({ className }: ProjectsProps) => {
               </span>
         <div id='reverse-scroll'
              className='w-full vertical-rl rotate-180 overflow-x-scroll overflow-y-hidden sm:pb-20 pb-10 whitespace-nowrap'>
-          {list.map((item, i) => <div key={i}>{item}</div>)}
+          {projectList.map((item, i) => <div key={i}>{item.name}</div>)}
         </div>
       </div>
 
