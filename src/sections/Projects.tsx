@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 interface ProjectsContent {
   title: string;
-  list: { name: string, selected: boolean, tech: string[]}[];
+  list: { name: string, selected: boolean, tech: string[] }[];
 }
 
 interface ProjectsProps {
@@ -14,7 +14,7 @@ interface ProjectsProps {
 
 export const Projects = ({ className, selectedTech }: ProjectsProps) => {
   const { title, list } = content.projects as ProjectsContent;
-  const [projectList, setProjectList ] = useState(list);
+  const [projectList, setProjectList] = useState(list);
 
   useEffect(() => {
     if (selectedTech.length !== 0) {
@@ -43,8 +43,9 @@ export const Projects = ({ className, selectedTech }: ProjectsProps) => {
       <div className={`ease-in-out duration-500 transform flex flex-col justify-end sm:text-[1.6vw] text-[3vw]
        w-0 sm:p-5 p-2 overflow-hidden ${selectedTech.length > 0 ? 'flex-grow' : 'group-hover:flex-grow'}`}>
               <span
-                className={`delay-300 transform translate-y-2 opacity-0 duration-200
-                ${selectedTech.length > 0 ? 'translate-y-0 opacity-100' : 'group-hover:translate-y-0 group-hover:opacity-100'}`}>
+                className={twMerge(
+                  'delay-300 transform translate-y-2 opacity-0 duration-200',
+                  selectedTech.length > 0 ? 'translate-y-0 opacity-100' : 'group-hover:translate-y-0 group-hover:opacity-100')}>
                 PROFESSIONAL
               </span>
         <div id='reverse-scroll'

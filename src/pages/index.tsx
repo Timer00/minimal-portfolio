@@ -6,7 +6,7 @@ import { Hero } from "~/sections/Hero";
 import { Tech } from "~/sections/Tech";
 import { Projects } from "~/sections/Projects";
 import { LightDarkToggle } from "~/components/LightDarkToggle";
-import { memo, useState } from "react";
+import React, { memo, useState } from "react";
 
 interface ResponsiveContainerProps {
   className: string;
