@@ -5,7 +5,7 @@ import { Selectable } from "~/components/Selectable";
 interface TechContent {
   title: string;
   name: string;
-  year: string;
+  fromYear: string;
   list: string[];
 }
 
@@ -15,7 +15,7 @@ interface TechProps {
 }
 
 export const Tech = ({ className, handleTechFilter }: TechProps) => {
-  const { title, name, year, list } = content.tech as TechContent;
+  const { title, name, fromYear, list } = content.tech as TechContent;
 
   return (
     <div className={twMerge('grid border-l-2 border-primary', className)}>
@@ -33,7 +33,7 @@ export const Tech = ({ className, handleTechFilter }: TechProps) => {
             T H E O<br />C A R R A R A
           </p>
           <div className='sm:m-5 m-3 sm:mt-3 mt-1 sm:text-[1.3vw] text-[2vw]'>
-            {year}
+            {fromYear}-{(new Date).getFullYear()}
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@
   "tech": {
     "title": "Tech",
     "name": "Theo Carrara",
-    "year": "2016-2023",
+    "fromYear": "2016",
     "list": [
       "React",
       "Javascript",
