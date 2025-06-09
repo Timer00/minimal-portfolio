@@ -24,6 +24,10 @@
 .dark {
     --color-primary: 228 226 221; /* dark mode primary color (light mode secondary color) */
     --color-secondary: 41 41 41; /* dark mode secondary color (light mode primary color) */
+
+    img {
+        filter: invert(1);
+    }
 }
 
     /* Candle Chart styled scrollbar */
