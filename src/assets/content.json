@@ -2,7 +2,7 @@
   "hero": {
     "title": "theo.host",
     "link": "https://theo.host",
-    "description": "Accomplished Tech Lead with a successful 8 year track record managing teams and delivering high-quality software solutions."
+    "description": "Accomplished Tech Lead with a successful ${YEARS_OF_EXPERIENCE} year track record leading teams and delivering high-quality software solutions."
   },
   "tech": {
     "title": "Tech",

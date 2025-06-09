@@ -18,7 +18,7 @@ export const Hero = ({ className }: HeroProps) => {
     <div className={twMerge('grid', className)}>
       <a href={link} className='row-span-1 center-content font-bold sm:text-[6vw] text-[10vw]'>{title}</a>
       <div className='row-span-2 sm:p-5 p-0 sm:px-10 px-7 text-justify sm:text-[1.6vw] text-[2.8vw] tracking-tight'>
-        {description}
+        {description.replace('${YEARS_OF_EXPERIENCE}', `${new Date().getFullYear() - 2015}`)}
       </div>
     </div>
   );
