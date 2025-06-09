@@ -38,25 +38,25 @@ export const Tech = ({ className, handleTechFilter }: TechProps) => {
           <div className="m-3 mt-1 text-[2vw] sm:m-5 sm:mt-3 sm:text-[1.3vw]">
             {fromYear}-{new Date().getFullYear()}
           </div>
-          <div className="ml-5 flex items-center gap-2">
+          <div className="ml-3 sm:ml-5 flex items-center gap-2">
             <a
               href="mailto:theo@codicem.dev"
             >
-              <img src="/email.svg" alt="Email" className="h-6 w-6" />
+              <img src="/email.svg" alt="Email" className="w-4 h-4 sm:h-6 sm:w-6" />
             </a>
             <a
               href="https://www.linkedin.com/in/theocarrara/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/linkedin.svg" alt="LinkedIn" className="h-6 w-6" />
+              <img src="/linkedin.svg" alt="LinkedIn" className="w-4 h-4 sm:h-6 sm:w-6" />
             </a>
             <a
               href="https://github.com/Timer00"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/github.svg" alt="GitHub" className="h-[18px] w-[18px]" />
+              <img src="/github.svg" alt="GitHub" className="h-[13px] w-[13px] sm:h-[18px] sm:w-[18px]" />
             </a>
           </div>
         </div>
