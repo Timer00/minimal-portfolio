@@ -16,9 +16,9 @@ export const Hero = ({ className }: HeroProps) => {
 
   return (
     <div className={twMerge('grid', className)}>
-      <a href={link} className='row-span-1 center-content font-bold sm:text-[6vw] text-[10vw]'>{title}</a>
-      <div className='row-span-2 sm:p-5 p-0 sm:px-10 px-7 text-justify sm:text-[1.6vw] text-[2.8vw] tracking-tight'>
-        {description.replace('${YEARS_OF_EXPERIENCE}', `${new Date().getFullYear() - 2015}`)}
+      <a href={link} className='row-span-1 center-content font-bold sm:text-[6vw] 3xl:text-[3vw] text-[10vw]'>{title}</a>
+      <div className='row-span-2 sm:p-5 p-0 sm:px-10 px-7 text-justify sm:text-[1.6vw] 3xl:text-[1vw] text-[2.8vw] tracking-tight'>
+        {description.replace('${YEARS_OF_EXPERIENCE}', `${new Date().getFullYear() - 2016}`)}
       </div>
     </div>
   );

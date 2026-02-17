@@ -19,7 +19,7 @@ export const Tech = ({ className, handleTechFilter }: TechProps) => {
 
   return (
     <div className={twMerge("grid border-l-2 border-primary", className)}>
-      <div className="col-span-2 m-3 mb-6 mr-0 mt-0 overflow-x-hidden overflow-y-scroll pr-2 text-[3vw] sm:m-5 sm:mb-14 sm:mr-0 sm:text-[1.6vw]">
+      <div className="col-span-2 m-3 mb-6 mr-0 mt-0 overflow-x-hidden overflow-y-scroll pr-2 text-[3vw] sm:m-5 sm:mb-14 sm:mr-0 sm:text-[1.6vw] 3xl:text-[1vw]">
         {list.map((item, i) => (
           <Selectable onClick={handleTechFilter} className="pl-2" key={i}>
             {item}
@@ -28,14 +28,14 @@ export const Tech = ({ className, handleTechFilter }: TechProps) => {
       </div>
 
       <div className="col-span-3 row-span-1 mb-4 grid grid-rows-2">
-        <div className="row-span-1 border-b-2 border-primary p-2 text-[9vw] font-bold text-bottom sm:p-5 sm:text-[6vw]">
+        <div className="row-span-1 border-b-2 border-primary p-2 text-[9vw] font-bold text-bottom sm:p-5 sm:text-[6vw] 3xl:text-[3vw]">
           {title}
         </div>
         <div className="row-span-1 max-w-fit">
-          <p className="pl-3 pt-3 text-[3vw] font-bold tracking-widest sm:pl-5 sm:pt-5 sm:text-[1.8vw]">
+          <p className="pl-3 pt-3 text-[3vw] font-bold tracking-widest sm:pl-5 sm:pt-5 sm:text-[1.8vw] 3xl:text-[1.1vw]">
             T H E O<br />C A R R A R A
           </p>
-          <div className="m-3 mt-1 text-[2vw] sm:m-5 sm:mt-3 sm:text-[1.3vw]">
+          <div className="m-3 mt-1 text-[2vw] sm:m-5 sm:mt-3 sm:text-[1.3vw] 3xl:text-[0.9vw]">
             {fromYear}-{new Date().getFullYear()}
           </div>
           <div className="ml-3 sm:ml-5 flex items-center gap-2">
