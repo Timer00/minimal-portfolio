@@ -18,9 +18,11 @@ export const Projects = ({ className, selectedTech }: ProjectsProps) => {
 
   useEffect(() => {
     if (selectedTech.length !== 0) {
+      const selectedTechLower = selectedTech.map(t => t.toLowerCase());
       const modifiedList = list.map(project => {
-        const isSelected = project.tech.some(tech =>
-          selectedTech.map(t => t.toLowerCase()).includes(tech.toLowerCase())
+        const projectTechLower = project.tech.map(t => t.toLowerCase());
+        const isSelected = selectedTechLower.every(tech =>
+          projectTechLower.includes(tech)
         );
         return {
           ...project,
