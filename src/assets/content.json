@@ -5,39 +5,166 @@
     "description": "Accomplished Tech Lead with a successful ${YEARS_OF_EXPERIENCE} year track record leading teams and delivering high-quality software solutions."
   },
   "tech": {
-    "title": "Tech",
+    "title": "Skills",
     "name": "Theo Carrara",
     "fromYear": "2016",
     "list": [
       "React",
-      "Javascript",
-      "NodeJs",
-      "Tailwind",
       "NextJs",
+      "Typescript",
+      "Tailwind",
+      "Leadership",
+      "NodeJs",
+      "Firebase",
+      "GCP",
+      "AWS",
+      "Javascript",
+      "Stripe",
+      "Zustand",
+      "OpenSpec",
+      "SDD",
+      "TanStack Query",
+      "Python",
+      "RAG",
+      "LLM",
+      "Zod",
       "Docker",
       "Liquid",
       "HTML5",
       "CSS3",
       "React Native",
       "Git",
+      "Jira",
+      "Linear",
       "MySql",
       "Postgres",
       "Graphic Design",
+      "Product management",
       "GraphQL",
       "REST",
+      "Photoshop",
+      "Illustrator",
+      "Storybook",
+      "Jest",
+      "Cypress",
+      "Sentry",
+      "Vitest",
+      "styled-components",
       "PWA",
-      "Canvas"
+      "HTML5 Canvas"
     ]
   },
   "projects": {
     "title": "PROJECTS",
     "list": [
       {
+        "name": "Elys Health",
+        "selected": true,
+        "tech": [
+          "React",
+          "NextJs",
+          "Typescript",
+          "Tailwind",
+          "AWS",
+          "Stripe",
+          "OpenSpec",
+          "TanStack Query",
+          "Python",
+          "LLM",
+          "Docker",
+          "React Native",
+          "Git",
+          "Linear",
+          "Postgres",
+          "REST",
+          "Storybook",
+          "Sentry",
+          "Zod",
+          "Vitest"
+        ]
+      },
+      {
+        "name": "Peec AI",
+        "selected": true,
+        "tech": [
+          "React",
+          "NextJs",
+          "Typescript",
+          "Tailwind",
+          "GCP",
+          "Firebase",
+          "Stripe",
+          "Zustand",
+          "TanStack Query",
+          "LLM",
+          "Docker",
+          "Git",
+          "Linear",
+          "Postgres",
+          "REST",
+          "Storybook",
+          "Sentry",
+          "Zod",
+          "Vitest"
+        ]
+      },
+      {
+        "name": "Dutchess Management",
+        "selected": true,
+        "tech": [
+          "React",
+          "NextJs",
+          "Typescript",
+          "Tailwind",
+          "Leadership",
+          "NodeJs",
+          "AWS",
+          "Python",
+          "TanStack Query",
+          "RAG",
+          "LLM",
+          "Zod",
+          "Docker",
+          "HTML5",
+          "CSS3",
+          "Git",
+          "Linear",
+          "Postgres",
+          "Product management"
+        ]
+      },
+      {
+        "name": "Kittl",
+        "selected": true,
+        "tech": [
+          "git",
+          "Typescript",
+          "HTML5",
+          "CSS3",
+          "React",
+          "NodeJS",
+          "NextJS",
+          "HTML5 Canvas",
+          "Docker",
+          "LLM",
+          "REST",
+          "Tailwind",
+          "Sentry",
+          "Cypress",
+          "Jest",
+          "Zustand",
+          "Storybook",
+          "Leadership",
+          "styled-components"
+        ]
+      },
+      {
         "name": "MySecondEar",
-        "selected":true,
+        "selected": true,
         "tech": [
           "git",
           "Javascript",
+          "Leadership",
           "HTML5",
           "CSS3",
           "React",
@@ -56,6 +183,7 @@
         "tech": [
           "git",
           "Javascript",
+          "Typescript",
           "HTML5",
           "CSS3",
           "React",
@@ -77,7 +205,7 @@
           "CSS3",
           "React",
           "NodeJS",
-          "Canvas"
+          "HTML5 Canvas"
         ]
       },
       {
@@ -125,7 +253,7 @@
           "CSS3",
           "React",
           "NodeJS",
-          "Canvas"
+          "HTML5 Canvas"
         ]
       },
       {
@@ -160,7 +288,7 @@
           "Javascript",
           "HTML5",
           "CSS3",
-          "Canvas"
+          "HTML5 Canvas"
         ]
       },
       {
@@ -175,21 +303,24 @@
         "name": "Gabriel Carrara",
         "selected": true,
         "tech": [
-          "Graphic Design"
+          "Graphic Design",
+          "Photoshop"
         ]
       },
       {
         "name": "Caminhos Zen",
         "selected": true,
         "tech": [
-          "Graphic Design"
+          "Graphic Design",
+          "Photoshop"
         ]
       },
       {
         "name": "F. G. A.",
         "selected": true,
         "tech": [
-          "Graphic Design"
+          "Graphic Design",
+          "Illustrator"
         ]
       }
     ]
