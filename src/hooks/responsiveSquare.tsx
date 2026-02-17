@@ -6,8 +6,10 @@ export function useResponsiveSquare(percentageOfScreen: number) {
   useEffect(() => {
     const updateSize = () => {
       const minDimension = Math.min(window.innerHeight, window.innerWidth);
+      const maxContainer = 1500; // Cap at 1000px to prevent oversized layout on 4K/large displays
       if (window.innerWidth > 400) {
-        setDimension(minDimension * percentageOfScreen);  // 80% of the smallest viewport dimension
+        const size = minDimension * percentageOfScreen;
+        setDimension(Math.min(size, maxContainer));
       } else {
         setDimension(minDimension * 1); // If mobile dimensions can be as large as possible
       }

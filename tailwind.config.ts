@@ -5,6 +5,9 @@ export default {
   darkMode: 'media',
   theme: {
     extend: {
+      screens: {
+        '3xl': '2800px',
+      },
       colors: {
         primary: 'rgb(var(--color-primary))',
         secondary: 'rgb(var(--color-secondary))',

@@ -18,9 +18,11 @@ export const Projects = ({ className, selectedTech }: ProjectsProps) => {
 
   useEffect(() => {
     if (selectedTech.length !== 0) {
+      const selectedTechLower = selectedTech.map(t => t.toLowerCase());
       const modifiedList = list.map(project => {
-        const isSelected = project.tech.some(tech =>
-          selectedTech.map(t => t.toLowerCase()).includes(tech.toLowerCase())
+        const projectTechLower = project.tech.map(t => t.toLowerCase());
+        const isSelected = selectedTechLower.every(tech =>
+          projectTechLower.includes(tech)
         );
         return {
           ...project,
@@ -36,11 +38,11 @@ export const Projects = ({ className, selectedTech }: ProjectsProps) => {
 
   return (
     <div className={twMerge('justify-end flex col-span-3 row-span-1 group sm:pl-0 pl-8', className)}>
-      <div className='flex flex-none items-end font-bold sm:text-[3.2vw] text-[6vw] leading-normal'>
+      <div className='flex flex-none items-end font-bold sm:text-[3.2vw] 3xl:text-[2vw] text-[6vw] leading-normal'>
         P R<br />O J<br />E C<br />T S
       </div>
 
-      <div className={`ease-in-out duration-500 transform flex flex-col justify-end sm:text-[1.6vw] text-[3vw]
+      <div className={`ease-in-out duration-500 transform flex flex-col justify-end sm:text-[1.6vw] 3xl:text-[1vw] text-[3vw]
        w-0 sm:p-5 p-2 overflow-hidden ${selectedTech.length > 0 ? 'flex-grow' : 'group-hover:flex-grow'}`}>
               <span
                 className={twMerge(
